@@ -16,4 +16,9 @@ describe('Cnpj Validator', () => {
         const sut = makeSut()
         expect(sut.validate('')).toBe(false)
     })
+
+    test('should return true if a valid cnpj is provided', () => {
+        const sut = makeSut()
+        expect(sut.validate('12.345.678/9123-45')).toBe(true)
+    })
 })
